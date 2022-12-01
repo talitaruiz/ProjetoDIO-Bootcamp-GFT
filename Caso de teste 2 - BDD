@@ -1,0 +1,12 @@
+Feature: Cliente sem cadastro deseja comprar o produto Sauce Labs Backpack
+    @TestCaseKey=LOJ-T6
+    Scenario: Cliente sem cadastro deseja comprar o produto Sauce Labs Backpack
+        
+        Given o cliente entra no site "https://www.saucedemo.com/"
+        And visualiza o botão de "CADASTRE-SE" e clica nele
+        When abre um formulário para preenchimento com todos os dados do novo usuário que deve ser realizado nesse momento 
+        And o usuário deve clicar no botão salvar para finalizar o cadastro 
+        Then o usuário clica no botão "PRODUCTS" e visualiza todos os produtos disponíveis para compras
+        And seleciona o produto desejado Sauce Labs Backpack clicando no botão "ADD TO CART"
+        And usuário clica no carrinho de compras no canto superior direito 
+        And finaliza a compra inserindo seus dados de cartão de crédito

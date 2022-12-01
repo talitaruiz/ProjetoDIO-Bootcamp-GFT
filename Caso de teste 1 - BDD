@@ -1,0 +1,10 @@
+Feature: Cliente  já cadastrado deseja alterar seu endereço pois mudou de residência
+    @TestCaseKey=LOJ-T5
+    Scenario: Cliente  já cadastrado deseja alterar seu endereço pois mudou de residência
+        
+        Given que cliente já possui cadastro no site 
+        When ele insere seu username e Password
+        And clica no botão "LOGIN"
+        Then visualiza o botão "Minha conta" e clica nele
+        And visualiza o endereço cadastrado fazendo sua alteração
+        And clica no botão "Salvar alterações" para salvar o novo endereço de cadastro
